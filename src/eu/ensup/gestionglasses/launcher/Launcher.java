@@ -13,6 +13,7 @@ public class Launcher {
         Glasse glasse1 = new Glasse(1, 123456789, "Rouge", 120.00);
 
         IDao iDao = new GlasseDao();
+
         IDao iDaoJpa = new GlasseDaoJpa();
 
         GlasseService glasseService = new GlasseService(iDaoJpa);
