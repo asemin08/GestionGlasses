@@ -35,6 +35,8 @@ public class Launcher {
         } else {
             System.out.println("LAUNCHER: Récuperation des lunettes échoué");
         }
+        applicationContext.close();
+
     }
 
 }
