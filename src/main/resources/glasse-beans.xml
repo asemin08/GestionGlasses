@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="glasseDao" class="eu.ensup.gestionglasses.dao.GlasseDao" init-method="initialisation" destroy-method="destruction">
+    </bean>
+
+    <bean id="glasseDaoJpa" class="eu.ensup.gestionglasses.dao.GlasseDaoJpa" init-method="initialisation" destroy-method="destruction">
+    </bean>
+
+
+
+    <bean id="glasseService" class="eu.ensup.gestionglasses.service.GlasseService" init-method="initialisation" destroy-method="destruction">
+        <property name="iDao" ref="glasseDao"></property>
+    </bean>
+
+</beans>
