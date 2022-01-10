@@ -15,7 +15,7 @@ public class Launcher {
 
         // 1. Chargement du conteneur en 4.0.0 Spring
         ConfigurableApplicationContext applicationContext = (ConfigurableApplicationContext) new ClassPathXmlApplicationContext(
-                "glasse-beans.xml");
+                "service-beans.xml");
 
         // 2. Recuperation d'un bean du conteneur
         GlasseService compteService = (GlasseService) applicationContext.getBean("glasseService");
