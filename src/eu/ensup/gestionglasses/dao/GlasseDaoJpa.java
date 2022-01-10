@@ -4,7 +4,8 @@ import eu.ensup.gestionglasses.domaine.Glasse;
 
 import java.util.List;
 
-public class GlasseDao implements IDao {
+
+public class GlasseDaoJpa implements IDao {
 
     @Override
     public Glasse getGlasseById(int id) {
