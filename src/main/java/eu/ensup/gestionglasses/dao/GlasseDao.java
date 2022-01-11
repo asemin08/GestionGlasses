@@ -58,12 +58,47 @@ public class GlasseDao implements IDao {
 
     @Override
     public void createGlasse(Glasse glasse) {
+        Connection cn = null;
+        Statement st = null;
+        ResultSet rs = null;
+
+        try{
+            // Etape 1 : Chargement du driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Etape 2 : récupération de la connexion
+            cn = DriverManager.getConnection(url, login, passwd);
+
+            // Etape 3 : Création d'un statement
+            st = cn.createStatement();
+
+            String sql = "INSERT INTO Glasse (reference, label, price) VALUES (" + glasse.getReference()
+                    + ", '" + glasse.getLabel() + "', '" + glasse.getPrice() + "' )";
+
+
+            // Etape 4 : exécution requête
+            st.executeQuery(sql);
+
+
+        } catch(SQLException | ClassNotFoundException e){
+            // TODO Remove
+            e.printStackTrace();
+        } finally {
+            try {
+                // Etape 6 : libérer ressources de la mémoire.
+                cn.close();
+                st.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
         System.out.println("DAO: création des lunettes " + glasse.toString());
     }
 
     @Override
     public Glasse updateGlasse(Glasse glasse) {
         System.out.println("DAO: mise à jour du lunettes " + glasse.toString());
+
         return null;
     }
 
