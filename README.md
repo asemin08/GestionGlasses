@@ -9,7 +9,7 @@ Ce projet à été réalisé dans le cadre d'une formation à l'ENSUP. Cette for
 ## Prérequis
 * Avoir Java JDK 16
 * Avoir Maven
-* Télécharger le code du projet [Le code](https://github.com/asemin08/GestionGlasses)
+* Télécharger le code du projet
 * Se placer sur la branche qui correspond au TP
 * Exécuter le main de l'application
 
