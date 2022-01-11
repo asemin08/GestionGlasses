@@ -4,6 +4,7 @@
 Application qui permet à un opticien de gérer son stock de lunettes.
 
 Ce projet à été réalisé dans le cadre d'une formation à l'ENSUP. Cette formation avait pour objectif la découverte de Spring et Spring Framework.
+
 ---
 ## Prérequis
 * Avoir Java JDK 16
