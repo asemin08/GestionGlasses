@@ -5,8 +5,13 @@
 
     <import resource="dao-beans.xml"/>
 
-    <bean id="glasseService" class="eu.ensup.gestionglasses.service.GlasseService" init-method="initialisation" destroy-method="destruction">
+    <!-- Sans auto-wiring -->
+    <!-- <bean id="glasseService" class="eu.ensup.gestionglasses.service.GlasseService" init-method="initialisation" destroy-method="destruction">
         <property name="iDao" ref="glasseDao"></property>
+    </bean> -->
+
+    <!-- Auto-wiring -->
+    <bean id="glasseDao" class="eu.ensup.gestionglasses.service.GlasseService" init-method="initialisation" destroy-method="destruction">
     </bean>
 
 </beans>
