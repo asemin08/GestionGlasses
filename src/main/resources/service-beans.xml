@@ -11,7 +11,7 @@
     </bean> -->
 
     <!-- Auto-wiring -->
-    <bean id="glasseDao" class="eu.ensup.gestionglasses.service.GlasseService" init-method="initialisation" destroy-method="destruction">
+    <bean id="glasseService" class="eu.ensup.gestionglasses.service.GlasseService" init-method="initialisation" destroy-method="destruction" autowire="byName">
     </bean>
 
 </beans>
