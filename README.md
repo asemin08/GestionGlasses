@@ -15,7 +15,7 @@ Application qui permet la gestion de lunette.
 
 # Prérequis
 
-* Avoir Java JDK 17
+* Avoir Java JDK 16
 * Avoir Maven
 * Récupérer le code [Le code](https://github.com/asemin08/GestionGlasses)
 * Ce mettre sur la branche voulu
