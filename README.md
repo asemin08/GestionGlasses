@@ -13,6 +13,8 @@ Application qui permet la gestion de lunette.
 * Voici la branche projet2containerAnnotation pour les 2 container avec annotations + autowired [containerAnnotation](https://github.com/asemin08/GestionGlasses/tree/projet2containerAnnotation)
 * Voici la branche projet5 pour une utilisation basic de jdbc [jdbcBasic](https://github.com/asemin08/GestionGlasses/tree/projet5)
 * Voici la branche projet6 pour une utilisation de jdbc avec une injection du dataSource [jdbc+InjectionDataSource](https://github.com/asemin08/GestionGlasses/tree/projet6)
+* Voici la branche projet7 pour une utilisation de jdbc avec externalisation informations database [externalisation informations database](https://github.com/asemin08/GestionGlasses/tree/projet7)
+
 --- 
 
 # Prérequis
