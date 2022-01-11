@@ -52,12 +52,17 @@ public class GlasseDao implements IDao {
 
     @Override
     public Glasse updateGlasse(Glasse glasse) {
+        System.out.println("DAO: update des lunettes " + glasse.toString());
+        String query = "update Glasse set reference = ?, label = ?, price = ? where id = ?";
+        jdbcTemplate.update(query, glasse.getReference(), glasse.getLabel(), glasse.getPrice(), glasse.getId());
         return glasse;
     }
 
     @Override
     public void deleteGlasse(Glasse glasse) {
         System.out.println("DAO: suppression des lunettes " + glasse.toString());
+        String deleteQuery = "delete from Glasse where id = ?";
+        jdbcTemplate.update(deleteQuery, glasse.getId());
     }
 
     @Override
