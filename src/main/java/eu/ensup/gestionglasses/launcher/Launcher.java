@@ -20,24 +20,9 @@ public class Launcher {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(GlasseBeansConfig.class);
 
         // 2. Recuperation d'un bean du conteneur
-        GlasseService compteService = (GlasseService) applicationContext.getBean("glasseService");
+        GlasseService glasseService = (GlasseService) applicationContext.getBean("glasseService");
 
-        Glasse glasse1 = new Glasse(1, 123456789, "Rouge", 120.00);
-
-        IDao iDao = new GlasseDao();
-
-        IDao iDaoJpa = new GlasseDaoJpa();
-
-        GlasseService glasseService = new GlasseService(iDaoJpa);
-        glasseService.creerGlasse(glasse1);
-
-        Glasse glasse2 = glasseService.recuperationGlasse(2);
-        if (glasse2 != null) {
-            System.out.println("LAUNCHER: Récuperation du compte réussie " + glasse2.toString());
-        } else {
-            System.out.println("LAUNCHER: Récuperation des lunettes échoué");
-        }
-//        applicationContext.close();
+        System.out.println(glasseService.recuperationGlasse(1));
 
     }
 

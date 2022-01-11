@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 public class GlasseBeansConfig {
     @Bean(initMethod = "initialisation", destroyMethod = "destruction")
     public GlasseService glasseService() {
-        return new GlasseService(glasseDaoJpa());
+        return new GlasseService(glasseDao());
     }
 
     @Bean(initMethod = "initialisation", destroyMethod = "destruction")
