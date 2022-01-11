@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd"
-
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
 >
+    <context:property-placeholder location="classpath:datasource.properties" />
 
-<bean id="glasseDao" class="eu.ensup.gestionglasses.dao.GlasseDao" init-method="initialisation" destroy-method="destruction">
+    <bean id="glasseDao" class="eu.ensup.gestionglasses.dao.GlasseDao" init-method="initialisation" destroy-method="destruction">
     <property name="bdd" ref="bdd"></property>
-</bean>
+    </bean>
 
 
-<bean id="glasseService" class="eu.ensup.gestionglasses.service.GlasseService" init-method="initialisation" destroy-method="destruction">
-    <property name="iDao" ref="glasseDao"></property>
-</bean>
+    <bean id="glasseService" class="eu.ensup.gestionglasses.service.GlasseService" init-method="initialisation" destroy-method="destruction">
+        <property name="iDao" ref="glasseDao"></property>
+    </bean>
 
-<bean id="bdd" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-    <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
-    <property name="url" value="jdbc:mysql://vps-0c0ccce5.vps.ovh.net:3306/spring" />
-    <property name="username" value="root" />
-    <property name="password" value="0D2B87E1DE55A9BD89009B37979CACD984AA773C7197BE3F46DCB15B0CAE7E6D" />
-</bean>
+    <bean id="bdd" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${database.driver}" />
+        <property name="url" value="${database.url}" />
+        <property name="username" value="${database.username}" />
+        <property name="password" value="${database.password}" />
+    </bean>
 
 </beans>
