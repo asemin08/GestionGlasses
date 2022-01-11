@@ -28,6 +28,6 @@ TP 5 | JDBC Basique | [JDBCBasique](https://github.com/asemin08/GestionGlasses/t
 TP 6 | JDBC avec injection du dataSource | [JDBCInjectionDataSource](https://github.com/asemin08/GestionGlasses/tree/projet6)
 TP 7 | JDBC avec externalisation des informations de la base | [JDBCExternalDatabaseInfo](https://github.com/asemin08/GestionGlasses/tree/projet7)
 TP 8 | JDBC avec JDBC Template dans le DAO | [JDBCTemplateInDao](https://github.com/asemin08/GestionGlasses/tree/projet8) 
-
+TP 9 | JDBC avec auto wiring | [JDBCAutoWiring](https://github.com/asemin08/GestionGlasses/tree/projet9)
 
 
