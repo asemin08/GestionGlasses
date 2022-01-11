@@ -1,15 +1,21 @@
 package eu.ensup.gestionglasses.dao;
 
 import eu.ensup.gestionglasses.domaine.Glasse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class GlasseDao implements IDao {
 
+    @Autowired
     private JdbcTemplate jdbcTemplate;
 
     public JdbcTemplate getJdbcTemplate() {
@@ -62,10 +68,12 @@ public class GlasseDao implements IDao {
         });
     }
 
+    @PostConstruct
     public void initialisation() {
         System.out.println("DAO: creation spring");
     }
 
+    @PreDestroy
     public void destruction() {
         System.out.println("DAO: destruction spring");
     }

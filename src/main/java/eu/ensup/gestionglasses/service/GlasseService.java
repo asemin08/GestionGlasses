@@ -3,11 +3,17 @@ package eu.ensup.gestionglasses.service;
 import eu.ensup.gestionglasses.dao.GlasseDao;
 import eu.ensup.gestionglasses.dao.IDao;
 import eu.ensup.gestionglasses.domaine.Glasse;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.List;
 
+@Service
 public class GlasseService {
 
+    @Autowired
     private IDao iDao;
 
     public GlasseService(IDao iDao) {
@@ -56,10 +62,12 @@ public class GlasseService {
         System.out.println("SERVICE: comparaison entre deux lunettes");
     }
 
+    @PostConstruct
     public void initialisation() {
         System.out.println("Service: creation spring");
     }
 
+    @PreDestroy
     public void destruction() {
         System.out.println("Service: destruction spring");
     }
