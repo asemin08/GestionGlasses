@@ -2,16 +2,24 @@ package eu.ensup.gestionglasses.dao;
 
 import eu.ensup.gestionglasses.domaine.Glasse;
 
+import javax.sql.DataSource;
+import javax.sql.rowset.spi.SyncResolver;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class GlasseDao implements IDao {
 
-    /// TODO remove mot de passe en dur
-    private String url = "jdbc:mysql://vps-0c0ccce5.vps.ovh.net:3306/spring";
-    private String login = "root";
-    private String passwd = "0D2B87E1DE55A9BD89009B37979CACD984AA773C7197BE3F46DCB15B0CAE7E6D";
+    private DataSource bdd;
+
+    public DataSource getBdd() {
+        return bdd;
+    }
+
+    public void setBdd(DataSource bdd) {
+        this.bdd = bdd;
+    }
+
 
     @Override
     public Glasse getGlasseById(int id) {
@@ -26,7 +34,8 @@ public class GlasseDao implements IDao {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Etape 2 : récupération de la connexion
-            cn = DriverManager.getConnection(url, login, passwd);
+            cn = bdd.getConnection();
+            System.out.println(cn);
 
             // Etape 3 : Création d'un statement
             st = cn.createStatement();
@@ -70,7 +79,7 @@ public class GlasseDao implements IDao {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Etape 2 : récupération de la connexion
-            cn = DriverManager.getConnection(url, login, passwd);
+            cn = bdd.getConnection();
 
             // Etape 3 : Création d'un statement
             st = cn.createStatement();
@@ -122,7 +131,7 @@ public class GlasseDao implements IDao {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Etape 2 : récupération de la connexion
-            cn = DriverManager.getConnection(url, login, passwd);
+            cn = bdd.getConnection();
 
             // Etape 3 : Création d'un statement
             st = cn.createStatement();
