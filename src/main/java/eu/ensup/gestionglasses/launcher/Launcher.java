@@ -1,15 +1,11 @@
 package eu.ensup.gestionglasses.launcher;
 
 
-import eu.ensup.gestionglasses.container.GlasseDaoBeansConfig;
-import eu.ensup.gestionglasses.container.GlasseServiceBeansConfig;
-import eu.ensup.gestionglasses.dao.GlasseDao;
-import eu.ensup.gestionglasses.dao.GlasseDaoJpa;
-import eu.ensup.gestionglasses.dao.IDao;
 import eu.ensup.gestionglasses.domaine.Glasse;
 import eu.ensup.gestionglasses.service.GlasseService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import eu.ensup.gestionglasses.container.GlasseServiceBeansConfig;
 
 public class Launcher {
 
