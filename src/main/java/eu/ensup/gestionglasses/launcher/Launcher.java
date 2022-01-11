@@ -24,6 +24,8 @@ public class Launcher {
 
         System.out.println(glasseService.recuperationGlasse(1));
 
+        System.out.println(glasseService.recuperationGlasse());
+
     }
 
 }
