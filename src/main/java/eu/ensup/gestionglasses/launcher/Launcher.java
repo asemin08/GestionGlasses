@@ -1,6 +1,7 @@
 package eu.ensup.gestionglasses.launcher;
 
 
+import eu.ensup.gestionglasses.domaine.Glasse;
 import eu.ensup.gestionglasses.service.GlasseService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -20,6 +21,11 @@ public class Launcher {
 
 
         System.out.println(glasseService.recuperationGlasse(1));
+        Glasse glasse1 = new Glasse(12,11444,"lunette violette",100.00);
+        glasseService.creerGlasse(glasse1);
+
+        System.out.println(glasseService.recuperationGlasse());
+
 
 
     }

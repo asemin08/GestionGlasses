@@ -14,6 +14,10 @@ public class Glasse {
         this.price = price;
     }
 
+    public Glasse() {
+
+    }
+
     public int getId() {
         return id;
     }

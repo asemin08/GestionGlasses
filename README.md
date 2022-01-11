@@ -14,6 +14,7 @@ Application qui permet la gestion de lunette.
 * Voici la branche projet5 pour une utilisation basic de jdbc [jdbcBasic](https://github.com/asemin08/GestionGlasses/tree/projet5)
 * Voici la branche projet6 pour une utilisation de jdbc avec une injection du dataSource [jdbc+InjectionDataSource](https://github.com/asemin08/GestionGlasses/tree/projet6)
 * Voici la branche projet7 pour une utilisation de jdbc avec externalisation informations database [externalisation informations database](https://github.com/asemin08/GestionGlasses/tree/projet7)
+* Voici la branche projet8 pour une utilisation de jdbc avec DAO avec  injection JdbcTemplate [DAO avec injection JdbcTemplate](https://github.com/asemin08/GestionGlasses/tree/projet8)
 --- 
 
 # Prérequis
