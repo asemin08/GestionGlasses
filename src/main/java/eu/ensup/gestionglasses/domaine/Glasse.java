@@ -1,6 +1,14 @@
 package eu.ensup.gestionglasses.domaine;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Glasse {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private int  reference;
     private String label;
@@ -15,7 +23,7 @@ public class Glasse {
     }
 
     public Glasse() {
-
+        super();
     }
 
     public int getId() {
