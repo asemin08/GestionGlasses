@@ -1,17 +1,25 @@
 # GestionGlasses
 
 ## Projet
-Application qui permet à un opticien de gérer son stock de lunettes.
+Application qui permet de tester le fonctionnement de springboot cli.
 
-Ce projet à été réalisé dans le cadre d'une formation à l'ENSUP. Cette formation avait pour objectif la découverte de Spring et Spring Framework.
+Ce projet à été réalisé dans le cadre d'une formation à l'ENSUP. Cette formation avait pour objectif la découverte de Spring boot.
 
 ---
 ## Prérequis
-* Avoir Java JDK 16
-* Avoir Maven
-* Télécharger le code du projet
-* Se placer sur la branche qui correspond au TP
-* Exécuter le main de l'application
+* Avoir télécharger le zip de springboot depuis ce site [SpringBoot](https://repo.spring.io/ui/native/release/org/springframework/boot/spring-boot-cli/)
+* Dezziper le dossier de Spring boot
+* Ajouter le chemin du dossier bin au variable d'environnement
+---
+## Execution de l'application
+1. Ouvrir un terminal depuis le dossier de l'application.
+2. Exécuter la commande ci-dessous :
+
+```
+spring run monappli.groovy
+```
+
+3. Pour vérifier son lancement ouvrir ce [lien](http://127.0.0.1:8080/) sur son navigateur.
 
 ---
 ## Liste des projets
@@ -29,5 +37,6 @@ TP 6 | JDBC avec injection du dataSource | [JDBCInjectionDataSource](https://git
 TP 7 | JDBC avec externalisation des informations de la base | [JDBCExternalDatabaseInfo](https://github.com/asemin08/GestionGlasses/tree/projet7)
 TP 8 | JDBC avec JDBC Template dans le DAO | [JDBCTemplateInDao](https://github.com/asemin08/GestionGlasses/tree/projet8) 
 TP 9 | JDBC avec auto wiring | [JDBCAutoWiring](https://github.com/asemin08/GestionGlasses/tree/projet9)
+TP 10 | Première Application Spring boot | [Springboot](https://github.com/asemin08/GestionGlasses/tree/projet10)
 
 
