@@ -8,7 +8,7 @@ Ce projet à été réalisé dans le cadre d'une formation à l'ENSUP. Cette for
 ---
 ## Prérequis
 * Avoir télécharger le zip de springboot depuis ce site [SpringBoot](https://repo.spring.io/ui/native/release/org/springframework/boot/spring-boot-cli/)
-* Dezziper le dossier de Spring boot
+* Dezipper le dossier de Spring boot
 * Ajouter le chemin du dossier bin au variable d'environnement
 ---
 ## Execution de l'application
